@@ -1,0 +1,28 @@
+<odoo>
+  <record id="view_calendar_event_form_exhibit" model="ir.ui.view">
+      <field name="name">calendar.event.form.exhibit</field>
+      <field name="model">calendar.event</field>
+      <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+      <field name="arch" type="xml">
+          <!-- Add fields to form -->
+          <xpath expr="//field[@name='description']" position="after">
+            <field name="render_ids" widget="many2many_binary"/>
+          </xpath>
+      </field>
+  </record>
+  
+    <record id="view_calendar_event_form_popup_exhibit" model="ir.ui.view">
+      <field name="name">calendar.event.form.exhibit</field>
+      <field name="model">calendar.event</field>
+      <field name="inherit_id" ref="calendar.view_calendar_event_form_popup"/>
+      <field name="arch" type="xml">
+          <!-- Add fields to form -->
+          <xpath expr="//form/group" position="after">
+            <field name="render_ids" widget="many2many_binary"/>
+            <!--<t t-foreach="render_ids" t-as="i">
+                <div><span t-field="i.datas" class="s_big_picture o_bg_img_opt_contain mt0 oe_img_bg oe_custom_bg" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-responsive&quot;}"/></div>
+            </t>-->
+          </xpath>
+      </field>
+  </record>
+</odoo>

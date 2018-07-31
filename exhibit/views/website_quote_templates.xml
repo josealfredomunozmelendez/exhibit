@@ -1,0 +1,116 @@
+<odoo>
+    <data>
+        <template id="so_quotation_exhibit" inherit_id="website_quote.so_quotation">
+            <xpath expr="//div[@class='text-center hidden-print mt16 mb16']/a[1]" position="replace">
+                <a class="btn btn-success disabled" data-toggle="modal" data-target="#modalaccept" t-if="order_valid and not quotation.require_payment" id="accept_bottom">
+                    <i class="fa fa-check"></i> Aceptar propuesta
+                </a>
+            </xpath>
+            
+            <xpath expr="//a[1]" position="replace">
+                <input type="checkbox"  id="terms" onchange="document.getElementById('accept').classList.remove('disabled'); document.getElementById('accept_bottom').classList.remove('disabled');"/>
+                <label for="terms">Acepto los <a data-toggle="modal" data-target="#modalterms">términos y condiciones</a>.</label>
+                
+                <a t-if="order_valid and not quotation.require_payment" class="btn btn-primary btn-block disabled" data-toggle="modal" data-target="#modalaccept" id="accept">
+                    <i class="fa fa-check"></i> Aceptar propuesta
+                </a>
+            </xpath>
+            
+            <xpath expr="//div[@id='quote_content']" position="inside">
+                <div class="modal fade" id="modalterms" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&amp;times;</span></button>
+                                <h4 class="modal-title">Términos y condiciones</h4>
+                            </div>
+                            
+                            <div class="modal-body">
+                                Términos y condiciones
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary" onclick="document.getElementById('terms').checked = true; document.getElementById('accept').classList.remove('disabled'); document.getElementById('accept_bottom').classList.remove('disabled');" data-dismiss="modal">Aceptar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        
+        
+        <template id="pricing_exhibit" inherit_id="website_quote.pricing">
+            <xpath expr="//section[@id='quote']" position="replace">
+              <h1 class="page-header">Precio</h1>
+                <table class="table wq-table">
+                    <thead>
+                        <tr>
+                            <th width="60%">Productos</th>
+                            <th width="30%">Cantidad</th>
+                            <th width="10%" class="text-right">Importe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+              <t t-foreach="quotation.order_lines_layouted()" t-as="page">
+                        <t t-foreach="page" t-as="layout_category">
+                            
+                            <t t-set="product_category" t-value="[]"/>
+                            <t t-foreach="layout_category['lines']" t-as="line">
+                                <t t-set="product_category" t-value="product_category+[line.layout_category_id]"/>
+                            </t>
+                            <t t-foreach="set(product_category)" t-as="category">
+                                <t t-set="product_amount" t-value="0"/>
+                                <t t-set="product_price" t-value="0"/>
+                                <t t-set="product_uom" t-value="0"/>
+                                <t t-foreach="layout_category['lines']" t-as="line">
+                                    <t t-if="category.id==line.layout_category_id.id">
+                                        <t t-set="product_amount" t-value="product_amount+line.product_uom_qty"/>
+                                        <t t-set="product_price" t-value="product_price+line.price_subtotal"/>
+                                        <t t-set="product_uom" t-value="line.product_uom.name"/>
+                                    </t>
+                                </t>
+                                
+                                
+                                <tr>
+                                    <td><span t-esc="category.name"/></td>
+                                    <td><span t-esc="product_amount"/> <span t-esc="product_uom"/></td>
+                                    <td class="text-right"><span t-esc="product_price" t-options='{"widget": "monetary","display_currency": quotation.pricelist_id.currency_id}'/></td>
+                                </tr>
+                            </t>
+                        </t>
+                        <t t-if="page_index == page_size - 1">
+                            <t t-if="any([line.tax_id for line in quotation.order_line])">
+                                <tr>
+                                    <td></td>
+                                    <td class="text-right"><strong>Subtotal:</strong></td>
+                                    <td class="text-right">
+                                        <strong data-id="total_amount" t-field="quotation.amount_untaxed" t-options='{"widget": "monetary","display_currency": quotation.pricelist_id.currency_id}'/>
+                                    </td>
+                                </tr>
+    
+                                <tr>
+                                    <td></td>
+                                    <td class="text-right">IVA(16%):</td>
+                                    <td class="text-right">
+                                        <span data-id="total_amount" t-field="quotation.amount_tax" t-options='{"widget": "monetary","display_currency": quotation.pricelist_id.currency_id}'/>
+                                    </td>
+                                </tr>
+                            </t>
+                            <tr>
+                                <td></td>
+                                <td class="text-right"><strong>Total:</strong></td>
+                                <td class="text-right">
+                                    <strong data-id="total_amount" t-field="quotation.amount_total" t-options='{"widget": "monetary","display_currency": quotation.pricelist_id.currency_id}'/>
+                                </td>
+                            </tr>
+                        </t>
+    
+              </t>
+                    </tbody>
+                </table>
+            </xpath>
+        </template>
+    </data>
+</odoo>

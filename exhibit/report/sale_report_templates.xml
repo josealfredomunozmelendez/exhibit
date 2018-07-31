@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_saleorder_document_exhibit" inherit_id="sale.report_saleorder_document" name="doc Content Attachments">
+    <xpath expr="//table[1]" position="replace"/>
+    <xpath expr="//p[@style='page-break-before:always;']" position="replace"/>
+    <xpath expr="//div[@id='informations']" position="after">
+        <table class="table wq-table">
+            <thead>
+                <tr>
+                    <th width="60%">Productos</th>
+                    <th width="30%">Cantidad</th>
+                    <th width="10%" class="text-right">Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="doc.order_lines_layouted()" t-as="page">
+                    <t t-foreach="page" t-as="layout_category">
+                        
+                        <t t-set="product_category" t-value="[]"/>
+                        <t t-foreach="layout_category['lines']" t-as="line">
+                            <t t-set="product_category" t-value="product_category+[line.layout_category_id]"/>
+                        </t>
+                        <t t-foreach="set(product_category)" t-as="category">
+                            <t t-set="product_amount" t-value="0"/>
+                            <t t-set="product_price" t-value="0"/>
+                            <t t-set="product_uom" t-value="0"/>
+                            <t t-foreach="layout_category['lines']" t-as="line">
+                                <t t-if="category.id==line.layout_category_id.id">
+                                    <t t-set="product_amount" t-value="product_amount+line.product_uom_qty"/>
+                                    <t t-set="product_price" t-value="product_price+line.price_subtotal"/>
+                                    <t t-set="product_uom" t-value="line.product_uom.name"/>
+                                </t>
+                            </t>
+                            
+                            
+                            <tr>
+                                <td><span t-esc="category.name"/></td>
+                                <td><span t-esc="product_amount"/> <span t-esc="product_uom"/></td>
+                                <td class="text-right"><span t-esc="product_price" t-options='{"widget": "monetary","display_currency": doc.pricelist_id.currency_id}'/></td>
+                            </tr>
+                        </t>
+                    </t>
+                </t>
+            </tbody>
+        </table>
+    </xpath>
+</template>
+</odoo>

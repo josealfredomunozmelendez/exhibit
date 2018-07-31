@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="base.main_company" model="res.company">
+        <field name="name">Exhibit Chihuahua, S. de R.L. M.I.</field>
+        <field name="logo" type="base64" file="dhm/static/src/img/icon.png"/>
+        <field name="website">http://exhibit.mx/</field>
+        <field name="phone">+52 (656) 616-8600</field>
+        <field name="email">info@exhibit.mx</field>
+    </record>
+    <record id="base.main_partner" model="res.partner">
+        <field name="vat">ECI120611C43</field>
+        <field name="property_account_position_id" search="[('name', '=', '601 - General de Ley Personas Morales')]"/>
+        <field name="street_name">Calzada del rio</field>
+        <field name="street2"></field>
+        <field name="street_number">8959</field>
+        <field name="street_number2"></field>
+        <field name="zip">32400</field>
+        <field name="city">Ciudad Juárez</field>
+        <field name="l10n_mx_edi_colony">Alameda Galgódromo</field>
+        <field name="state_id" ref="base.state_mx_chih"/>
+        <field name="country_id" ref="base.mx"/>
+    </record>
+</odoo>
