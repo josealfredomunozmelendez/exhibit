@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="portal_account_account" model="account.account">
+        <field name="name">Generic Sale</field>
+        <field name="code">GSAL</field>
+        <field name="user_type_id" ref="account.data_account_type_revenue"/>
+    </record>
+    <record id="portal_account_invoice" model="account.invoice">
+       <field name="partner_id" ref="l10n_mx_base.main_mx_address_company"/>
+       <field name="l10n_mx_report_name">AAA010101AAA_False</field>
+    </record>
+    <record id="portal_invoice_line_01" model="account.invoice.line">
+        <field name="name">Ipad Mini</field>
+        <field name="product_id" ref="product.product_product_4d_product_template"/>
+        <field name="price_unit">750</field>
+        <field name="invoice_id" ref="portal_account_invoice"/>
+        <field name="account_id" ref="portal_account_account"/>
+    </record>
+    <record id="account_invoice_pdf_signed" model="ir.attachment">
+        <field name="name">AAA010101AAA.pdf</field>
+        <field name="datas_fname">AAA010101AAA.pdf</field>
+        <field file="l10n_mx_portal/demo/AAA010101AAA.pdf" name="datas" type="base64"/>
+        <field name="res_model">account.invoice</field>
+        <field name="res_id" ref="portal_account_invoice"/>
+    </record>
+    <record id="account_invoice_xml_signed" model="ir.attachment">
+        <field name="name">AAA010101AAA_False.xml</field>
+        <field name="datas_fname">AAA010101AAA_False.xml</field>
+        <field file="l10n_mx_portal/tests/AAA010101AAA_portal01.xml" name="datas" type="base64"/>
+        <field name="res_model">account.invoice</field>
+        <field name="res_id" ref="portal_account_invoice"/>
+    </record>
+    <function eval="[[ref('portal_account_invoice')]]" model="account.invoice" name="invoice_validate"/>
+</odoo>

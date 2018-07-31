@@ -1,0 +1,104 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_mx_edi_fiscal_legend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 15:48+0000\n"
+"PO-Revision-Date: 2017-12-12 15:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_account_invoice_l10n_mx_edi_legend_ids
+#: model:ir.ui.view,arch_db:l10n_mx_edi_fiscal_legend.invoice_template_form_inherit
+msgid "Fiscal Legends"
+msgstr "Leyendas Fiscales"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model,name:l10n_mx_edi_fiscal_legend.model_account_invoice
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_name
+msgid "Legend Text"
+msgstr "Texto de la Leyenda"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,help:l10n_mx_edi_fiscal_legend.field_account_invoice_l10n_mx_edi_legend_ids
+msgid "Legends under tax provisions, other than those contained in the Mexican CFDI standard."
+msgstr "leyendas previstas en disposiciones fiscales, distintas a las contenidas en el estándar de CFDI mexicano."
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_rule
+msgid "Rule"
+msgstr "Norma"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,help:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_rule
+msgid "Specifies the Article number or rule that regulates the obligation of this legend."
+msgstr "Especifica el número de Artículo o regla que regula la obligación de esta leyenda."
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,help:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_tax_provision
+msgid "Specifies the Law, Resolution or Tax Disposition that regulates this legend. It must be expressed in capital letters without punctuation (e.g. ISR)."
+msgstr "Especifica la Ley, Resolución o Disposición fiscal que regula esta leyenda. Deberá expresarse en siglas de mayúsculas sin puntuación (p. ej: ISR)."
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,field_description:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_tax_provision
+msgid "Tax Provision"
+msgstr "Disposición Fiscal"
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model.fields,help:l10n_mx_edi_fiscal_legend.field_l10n_mx_edi_fiscal_legend_name
+msgid "Text to specify the fiscal legend."
+msgstr "Texto para especificar la leyenda fiscal."
+
+#. module: l10n_mx_edi_fiscal_legend
+#: model:ir.model,name:l10n_mx_edi_fiscal_legend.model_l10n_mx_edi_fiscal_legend
+msgid "l10n_mx_edi.fiscal.legend"
+msgstr "l10n_mx_edi.fiscal.legend"
+

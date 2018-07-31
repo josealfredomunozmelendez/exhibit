@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <template id="assets_backend" inherit_id="web.assets_backend"> 
+           <xpath expr="." position="inside"> 
+               <script type="text/javascript" src="/account_report_email/static/src/js/account_report_email.js"></script> 
+           </xpath>
+        </template>
+        <template id='account_report_email' inherit_id='account_reports.template_followup_report'>
+            <xpath expr="//div[hasclass('o_account_reports_summary')]" position="before">
+                <div class="o_account_reports_subject " t-if="context.get('print_mode') != True" style="display:none;">
+                    <label>Asunto</label>
+                    <p class="reportSubject"></p>
+                </div>
+                <div t-if="context.get('print_mode') != True" class="o_account_reports_subject_edit">
+                    <label>Asunto</label>
+                    <input type="text" name="subject" value=""/>
+                    <button t-att-data-id="partner.id" class="btn btn-primary js_account_report_save_subject">Guardar</button>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_documement_transfer" inherit_id="account.report_invoice_document">
+        <xpath expr="//table[@name='invoice_line_table']/tbody/tr[1]/td[2]/span" position="before">
+            <span>TRASLADO DE MERCANCIAS</span>
+        </xpath>
+        <xpath expr="//h2[1]/span[1]" position="replace">
+            <t t-if="not o.l10n_mx_edi_cfdi_uuid or (o.l10n_mx_edi_cfdi_uuid and xml.get('TipoDeComprobante') != 'T')">
+                <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Invoice</span>
+            </t>
+            <t t-if="o.l10n_mx_edi_cfdi_uuid and xml.get('TipoDeComprobante') == 'T'">
+                <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Transfer</span>
+            </t>
+        </xpath>
+    </template>
+</odoo>

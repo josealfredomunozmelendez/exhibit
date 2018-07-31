@@ -1,0 +1,17 @@
+<odoo>
+    <record id="rent_reserve" model="ir.ui.view">
+        <field name="name">sale.order.rent</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sales_person']" position="inside">
+                <group string="Shipping Information" name="sale_shipping">
+                    <field name="devolution_date"/>
+                </group>
+            </xpath>
+            <xpath expr="//group[@name='sales_person']" position="inside">
+                <field name="location_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_mx_edi_hr_expense
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-30 20:09+0000\n"
+"PO-Revision-Date: 2018-04-30 20:09+0000\n"
+"Last-Translator: Luis González <lgonzalez@vauxoo.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_edi_hr_expense
+#: model:ir.model,name:l10n_mx_edi_hr_expense.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: l10n_mx_edi_hr_expense
+#: code:addons/l10n_mx_edi_hr_expense/models/hr_expense.py:71
+#, python-format
+msgid "Error when try to generate the invoice for the expense \"%s\": %s"
+msgstr "Error al generar la factura para el gasto \"%s\": %s"
+
+#. module: l10n_mx_edi_hr_expense
+#: model:ir.model,name:l10n_mx_edi_hr_expense.model_hr_expense
+#: model:ir.model.fields,field_description:l10n_mx_edi_hr_expense.field_account_invoice_expense_id
+msgid "Expense"
+msgstr "Gasto"
+
+#. module: l10n_mx_edi_hr_expense
+#: model:ir.model,name:l10n_mx_edi_hr_expense.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "Informe de Gastos"
+
+#. module: l10n_mx_edi_hr_expense
+#: model:ir.model,name:l10n_mx_edi_hr_expense.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_mx_edi_hr_expense
+#: code:addons/l10n_mx_edi_hr_expense/models/hr_expense.py:42
+#, python-format
+msgid "Invoice to the expense %s created correctly"
+msgstr "La factura para el gasto %s fue creada correctamente"
+
+#. module: l10n_mx_edi_hr_expense
+#: code:addons/l10n_mx_edi_hr_expense/models/hr_expense.py:84
+#: code:addons/l10n_mx_edi_hr_expense/models/hr_expense.py:101
+#: model:ir.ui.view,arch_db:l10n_mx_edi_hr_expense.view_hr_expense_form_inh_l10n_mx
+#: model:ir.ui.view,arch_db:l10n_mx_edi_hr_expense.view_hr_expense_sheet_form_inh_l10n_mx
+#, python-format
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: l10n_mx_edi_hr_expense
+#: model:ir.model.fields,field_description:l10n_mx_edi_hr_expense.field_hr_employee_journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_mx_edi_hr_expense
+#: model:ir.model.fields,help:l10n_mx_edi_hr_expense.field_hr_employee_journal_id
+msgid "Specifies the journal that will be used to make the reimbursements to employees, for expenses with type \"to reimburse\""
+msgstr "Especifica el diario que será utilizado para hacer los reembolsos a empleados, para gastos de tipo \"a reembolsar\""
+
+#. module: l10n_mx_edi_hr_expense
+#: model:ir.model.fields,help:l10n_mx_edi_hr_expense.field_account_invoice_expense_id
+msgid "Stores the expense related with this invoice"
+msgstr "Almacena el gasto relacionado con esta factura"
+
+#. module: l10n_mx_edi_hr_expense
+#: code:addons/l10n_mx_edi_hr_expense/models/hr_expense.py:54
+#, python-format
+msgid "The Receptor's RFC in the XML does not match with your Company's RFC"
+msgstr "El RFC del Receptor en el XML no coincide con el RFC de la compañía"
+
+#. module: l10n_mx_edi_hr_expense
+#: code:addons/l10n_mx_edi_hr_expense/models/hr_expense.py:57
+#, python-format
+msgid "The XML UUID belongs to other invoice."
+msgstr "El UUID del XML pertenece a otra factura."
+
+#. module: l10n_mx_edi_hr_expense
+#: code:addons/l10n_mx_edi_hr_expense/models/hr_expense.py:60
+#, python-format
+msgid "The currency in the XML was not found or is disabled"
+msgstr "La moneda del XML no se encontró o se encuentra desactivada"
+
+#. module: l10n_mx_edi_hr_expense
+#: code:addons/l10n_mx_edi_hr_expense/models/hr_expense.py:77
+#, python-format
+msgid "The invoice could not be generated to the expense \"%s\", please verify the XML structure"
+msgstr "No se pudo generar la factura para el gasto \"%s\". Por favor, verifique la estructura del XML"
+
+#. module: l10n_mx_edi_hr_expense
+#: code:addons/l10n_mx_edi_hr_expense/models/hr_expense.py:58
+#, python-format
+msgid "The invoice reference belongs to other invoice of the same partner."
+msgstr "La referencia de la factura pertenece a otra factura de la misma persona o empresa."
+
+#. module: l10n_mx_edi_hr_expense
+#: code:addons/l10n_mx_edi_hr_expense/models/account_invoice.py:24
+#, python-format
+msgid "The journal is required in the expense employee"
+msgstr "El diario es obligatorio en el gasto del empleado"
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_currency" inherit_id="sale.report_saleorder_document">
+        <!-- Currency -->
+        <xpath expr="//span[@t-field='doc.amount_total']" position="before">
+            <span t-field="doc.currency_id"/>
+        </xpath>
+        <!-- Smaller Font Size -->
+        <xpath expr="//div[hasclass('page')]" position="attributes">
+            <attribute name="style">font-size:11px;</attribute>
+        </xpath>
+    </template>
+</odoo>

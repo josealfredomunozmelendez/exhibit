@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="dhm_report_invoice_document" inherit_id="account.report_invoice_document">
+        <!-- Currency -->
+        <xpath expr="//span[@t-field='o.amount_total']" position="before">
+            <span t-field="o.currency_id"/>
+        </xpath>
+        <!-- Smaller Font Size -->
+        <xpath expr="//div[hasclass('page')]" position="attributes">
+            <attribute name="style">font-size:15px;</attribute>
+        </xpath>
+    </template>
+</odoo>

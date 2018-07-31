@@ -1,0 +1,179 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * l10n_mx_edi_fuel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0alpha1+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-13 15:17+0000\n"
+"PO-Revision-Date: 2017-11-13 15:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_fuel_billing
+msgid "Add complements for fuel consumption"
+msgstr "Agrega los complementos para el consumo de combustible"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_res_partner_l10n_mx_edi_isepi
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_res_users_l10n_mx_edi_isepi
+msgid "Add the complement for electronic wallet account statement for fuel consumption in invoice"
+msgstr "Agregar el complemento de estado de cuenta de monederos electrónicos para consumo de combustible en la factura"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model,name:l10n_mx_edi_fuel.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_identifier
+msgid "Electronic purse identifier"
+msgstr "Identificador de Monedero Electrónico"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_res_partner_l10n_mx_edi_identifier
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_res_users_l10n_mx_edi_identifier
+msgid "Electronic purse number"
+msgstr "Numero de Monedero Electrónico"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_emitter_folio
+msgid "Emitter credit note reference"
+msgstr "Referencia de la nota de crédito del Emisor"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.ui.view,arch_db:l10n_mx_edi_fuel.view_l10n_mx_edi_fuel_complement_partner_form_inherit
+msgid "Fuel Billing"
+msgstr "Facturar Combustible"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_service_station
+msgid "Fuel consumption service station"
+msgstr "Estación de Servicio"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_res_partner_l10n_mx_edi_identifier
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_res_users_l10n_mx_edi_identifier
+msgid "Identifier Number"
+msgstr "Numero de Identificador"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model,name:l10n_mx_edi_fuel.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_res_company_l10n_mx_edi_isepi
+msgid "Is an Electronic purse issuer?"
+msgstr "Es un emisor de Monedero Electrónico?"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_fuel_billing
+msgid "Need fuel billing?"
+msgstr "Facturar Combustible"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_emitter_folio
+msgid "Number of the emitter credit note"
+msgstr "Numero de la nota de crédito del emisor"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_service_station
+msgid "Service Station"
+msgstr "Estación de Servicio"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_res_partner_l10n_mx_edi_service_station_num
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_res_users_l10n_mx_edi_service_station_num
+msgid "Service station code number, having this code also add the fuel consumption complement in invoice"
+msgstr "Numero de la Estación de Servicio, al tener un valor en este campo también agregar el complemento
+de consumo de combustible a la factura"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_res_partner_l10n_mx_edi_service_station_num
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_res_users_l10n_mx_edi_service_station_num
+msgid "Service station number"
+msgstr "Numero de la Estación de Servicio"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_identifier
+msgid "Set the electronic purse identifier for a service station invoice"
+msgstr "Fija el identificador de monedero electrónico cuando una Estación de Servicio emite una factura"
+
+#. module: l10n_mx_edi_fuel
+#: model:product.product,name:l10n_mx_edi_fuel.res_product_fuel_magna
+#: model:product.template,name:l10n_mx_edi_fuel.res_product_fuel_magna_product_template
+msgid "Magna Fuel"
+msgstr "Combustible Magna"
+
+#. module: l10n_mx_edi_fuel
+#: model:product.product,name:l10n_mx_edi_fuel.res_product_fuel_premium
+#: model:product.template,name:l10n_mx_edi_fuel.res_product_fuel_premium_product_template
+msgid "Premium Fuel"
+msgstr "Combustible Premium"
+
+#. module: l10n_mx_edi_fuel
+#: model:product.product,name:l10n_mx_edi_fuel.res_product_fuel_diesel
+#: model:product.template,name:l10n_mx_edi_fuel.res_product_fuel_diesel_product_template
+msgid "Diesel Fuel"
+msgstr "Combustible Diesel"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_emitter_reference
+msgid "Electronic Purse Issuer Reference"
+msgstr "Referencia de Emisor de Monedero Electrónico"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_product_product_l10n_mx_edi_fuel_billing
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_product_template_l10n_mx_edi_fuel_billing
+msgid "Add complements for fuel consumption when invoicing this product"
+msgstr "Agregar complemento para el consumo de combustible al facturar este producto"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_product_product_l10n_mx_edi_fuel_billing
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_product_template_l10n_mx_edi_fuel_billing
+msgid "Need fuel billing?"
+msgstr "Facturación de combustible"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.ui.view,arch_db:l10n_mx_edi_fuel.view_l10n_mx_edi_fuel_complement_account_invoice_form_inherit
+#: model:ir.ui.view,arch_db:l10n_mx_edi_fuel.view_l10n_mx_edi_fuel_complement_account_journal_form_inherit
+msgid "Fuel Billing"
+msgstr "Facturación de Combustible"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.ui.view,arch_db:l10n_mx_edi_fuel.view_l10n_mx_edi_fuel_complement_product_form_inherit
+msgid "Fuel Consumption"
+msgstr "Consumo de Combustible"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_account_journal_l10n_mx_edi_service_station_num
+msgid "Service station code number, having this code also add the fuel consumption complement in invoice"
+msgstr "Número de la estación de servicio, con este código también se agregará el complemento de consumo de combustible en la factura"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,field_description:l10n_mx_edi_fuel.field_account_journal_l10n_mx_edi_service_station_num
+msgid "Service station number"
+msgstr "Número de la Estación de Servicio"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_res_company_l10n_mx_edi_isepi
+msgid "This add the electronic purse emission complement for fuel consumption"
+msgstr "Agrega el complemento de emisión de monedero electrónico para el consumo de combustible"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_account_invoice_l10n_mx_edi_emitter_reference
+msgid "This is needed when a service station invoice a fuel consumption given an electronic purse issuer credit note. The format should be: 'credit note folio|electronic purse number|electronic purse identifier owner bank account'.ex.: 001|1234|0001234"
+msgstr "Necesario cuando una estación de servicio factura un consumo de combustible a través de una nota de crédito dada por el emisor de monedero electrónico. Debe usarse el siguiente formato: 'folio de la nota de crédito|número de monedero electrónico|número de cuenta bancaria del dueño del monedero electrónico'.ej.: 001|1234|0001234"
+
+#. module: l10n_mx_edi_fuel
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_res_partner_l10n_mx_edi_identifier
+#: model:ir.model.fields,help:l10n_mx_edi_fuel.field_res_users_l10n_mx_edi_identifier
+msgid "Electronic purse number. This is used when invoicing fuel consumption for this partner"
+msgstr "Número de monedero electrónico. Este campo es necesario cuando se facture consumo de combustible para este cliente"

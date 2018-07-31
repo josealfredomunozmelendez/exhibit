@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_purchaseorder_document_currency" inherit_id="purchase.report_purchaseorder_document">
+        <!-- Currency -->
+        <xpath expr="//span[@t-field='o.amount_total']" position="before">
+            <span t-field="o.currency_id"/>
+        </xpath>
+        <!-- Smaller Font Size -->
+        <xpath expr="//div[hasclass('page')]" position="attributes">
+            <attribute name="style">font-size:11px;</attribute>
+        </xpath>
+    </template>
+    
+    <!-- Smaller Font Size -->
+    <template id="report_purchasequotation_document_currency" inherit_id="purchase.report_purchasequotation_document">
+        <xpath expr="//div[hasclass('page')]" position="attributes">
+            <attribute name="style">font-size:11px;</attribute>
+        </xpath>
+    </template>
+</odoo>

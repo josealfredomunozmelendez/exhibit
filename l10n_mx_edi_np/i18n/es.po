@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * l10n_mx_edi_np
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-03 12:11+0000\n"
+"PO-Revision-Date: 2018-04-03 12:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_edi_np
+#: model:res.partner.category,name:l10n_mx_edi_np.l10n_mx_edi_np_tag_01
+msgid "01-Land"
+msgstr "01-Terreno"
+
+#. module: l10n_mx_edi_np
+#: model:res.partner.category,name:l10n_mx_edi_np.l10n_mx_edi_np_tag_02
+msgid "02-Land for commercial use"
+msgstr "02-Terreno uso comercial"
+
+#. module: l10n_mx_edi_np
+#: model:res.partner.category,name:l10n_mx_edi_np.l10n_mx_edi_np_tag_03
+msgid "03-Housing construction"
+msgstr "03-Construcción habitacional"
+
+#. module: l10n_mx_edi_np
+#: model:res.partner.category,name:l10n_mx_edi_np.l10n_mx_edi_np_tag_04
+msgid "04-Construction for commercial use"
+msgstr "04-Construcción uso comercial"
+
+#. module: l10n_mx_edi_np
+#: model:res.partner.category,name:l10n_mx_edi_np.l10n_mx_edi_np_tag_05
+msgid "05-Mixed use"
+msgstr "05-Uso mixto"
+
+#. module: l10n_mx_edi_np
+#: model:ir.model.fields,field_description:l10n_mx_edi_np.field_account_invoice_l10n_mx_edi_np_partner_id
+msgid "Buyer"
+msgstr "Adquiriente"
+
+#. module: l10n_mx_edi_np
+#: model:ir.model.fields,help:l10n_mx_edi_np.field_account_invoice_l10n_mx_edi_np_partner_id
+msgid "Buyer or buyers information"
+msgstr "Información de adquiriente o adquirientes"
+
+#. module: l10n_mx_edi_np
+#: model:ir.model.fields,field_description:l10n_mx_edi_np.field_res_partner_l10n_mx_edi_np_curp
+#: model:ir.model.fields,field_description:l10n_mx_edi_np.field_res_users_l10n_mx_edi_np_curp
+msgid "CURP"
+msgstr "CURP"
+
+#. module: l10n_mx_edi_np
+#: model:ir.model,name:l10n_mx_edi_np.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_mx_edi_np
+#: model:ir.model.fields,help:l10n_mx_edi_np.field_res_partner_l10n_mx_edi_np_curp
+#: model:ir.model.fields,help:l10n_mx_edi_np.field_res_users_l10n_mx_edi_np_curp
+msgid "Express the CURP of each alienator, or owner, or possessor of the servant property, in case of rights of way."
+msgstr "Expresa la CURP del enajenante o del propietario o poseedor del predio sirviente, en caso de servidumbres de paso."
+
+#. module: l10n_mx_edi_np
+#: model:ir.model,name:l10n_mx_edi_np.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_mx_edi_np
+#: model:ir.ui.view,arch_db:l10n_mx_edi_np.view_l10n_mx_edi_complement_np_invoice_form_inherit
+msgid "Notary Public"
+msgstr "Notario Público"
+
+#. module: l10n_mx_edi_np
+#: model:ir.model.fields,field_description:l10n_mx_edi_np.field_account_invoice_l10n_mx_edi_np_partner_ids
+msgid "Property"
+msgstr "Propiedad"
+
+#. module: l10n_mx_edi_np
+#: model:ir.model.fields,help:l10n_mx_edi_np.field_account_invoice_l10n_mx_edi_np_partner_ids
+msgid "Property or Properties Descriptions"
+msgstr "Descripción de la propiedad o propiedades"
+
+#. module: l10n_mx_edi_np
+#: model:res.partner.category,name:l10n_mx_edi_np.l10n_mx_edi_np_partnership
+msgid "co-ownership / conjugal partnership"
+msgstr "co-propiedad / sociedad conyugal"

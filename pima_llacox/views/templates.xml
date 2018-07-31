@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record id="remove_scrap_button" model="ir.ui.view">
+            <field name="name">mrp.workorder.view.form.tablet.menu</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="quality_mrp.mrp_workorder_view_form_tablet_menu"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='row workorder_menu']/div/button[@name='button_scrap']" position="attributes">
+                    <attribute name="groups">quality.group_quality_manager,__export__.res_groups_94_1bd52944</attribute>
+                </xpath>
+            </field> 
+        </record>
+
+        <record id="confirm_finish_button" model="ir.ui.view">
+            <field name="name">mrp.workorder.view.form.inherit.quality.tablet.new</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="quality_mrp.mrp_workorder_view_form_tablet"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='workorder_actions']/div/div/button[@name='do_finish']" position="attributes">
+                    <attribute name="confirm">¿Estás seguro que deseas marcar como hecho?</attribute>
+                    <attribute name="groups">quality.group_quality_manager,__export__.res_groups_94_1bd52944</attribute>
+                </xpath>
+            </field> 
+        </record>
+        
+        <record id="llacox_view_stock_move_lots" model="ir.ui.view">
+            <field name="name">stock.move.lots.form</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="mrp.view_stock_move_lots"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_uom_qty']" position="replace">
+                    <field name="product_uom_qty" readonly="0" nolabel="1"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="remove_analytic_account_in" model="ir.ui.view">
+            <field name="name">mrp.production.hide.rm.aa</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <!--<xpath expr="//field[@name='account_analytic_in_id']" position="replace"></xpath>-->
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="priority"></field>
+                </xpath>
+            </field> 
+        </record>
+    </data>
+</odoo>
+<!--
+quality.group_quality_manager
+quality.group_quality_user
+-->
