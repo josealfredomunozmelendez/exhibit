@@ -27,7 +27,7 @@
     # always loaded
     'data': [
         'data/company.xml',
-        'data/config.xml',
+        #'data/config.xml',
         'views/calendar.xml',
         'views/sale_order.xml',
         'views/website_quote_templates.xml',
